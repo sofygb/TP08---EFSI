@@ -13,9 +13,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
         <Route index element={<Home />}></Route>
+
         <Route path='/mapa' element={<Mapa />} ></Route>
         <Route path='/informacion' element={<Informacion />} ></Route>
-          <Route path='*' element={<h1>Not Found</h1>} ></Route>
+        
+        <Route path='*' element={<h1>Not Found</h1>} ></Route>
         </Route>
       </Routes>
     </BrowserRouter>
