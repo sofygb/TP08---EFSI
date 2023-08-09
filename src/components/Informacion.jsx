@@ -3,8 +3,8 @@ import React from "react";
 const Informacion = () => {
     return (
         <div className="container flex">
-            <p>Según la ONU, la gestión de los residuos tiene importantes implicaciones de salud pública, ya que es uno de los dos principales portadores y propagadores de enfermedades infecciosas. 
-                Una gestión ineficaz de residuos sólidos genera una mala impresión en inversionistas y turistas, lo que repercute en la pérdida de reputación y oportunidades de inversión. Así introducimos las siguientes prácticas:</p>
+        <p>Según la ONU, la gestión de los residuos tiene importantes implicaciones de salud pública, ya que es uno de los dos principales portadores y propagadores de enfermedades infecciosas. 
+            Una gestión ineficaz de residuos sólidos genera una mala impresión en inversionistas y turistas, lo que repercute en la pérdida de reputación y oportunidades de inversión. Así introducimos las siguientes prácticas:</p>
             <ul>
                 <il>
                     <h3>Reducir</h3></il>
@@ -22,6 +22,7 @@ const Informacion = () => {
             
             <h1>¿Qué se puede reciclar?</h1>
             <p>En los puntos verdes hay 3 tipos de tachos de reciclaje:</p>
+            <div className="flex accent">
             <ul>
                 <il>
                     <h3>Verde</h3>
@@ -33,6 +34,7 @@ const Informacion = () => {
                     <h3>Amarillo</h3>
                     <p>Plástico y latas. Para botellas de gaseosas, agua mineral y productos de limpieza, entre otros.</p></il>
             </ul>
+            </div>
         </div>    
     )
 }
