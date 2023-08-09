@@ -14,10 +14,12 @@ const Informacion = () => {
                     <h3>Reciclar</h3></il>
                 <il>
                     <h3>Recuperar</h3></il>            
-                </ul>
+            </ul>
             <p>Es así que nos vamos a centrar en la práctica del reciclaje.</p>            
+            
             <h1>¿Qué es el reciclaje?</h1>
             <p>El reciclaje es un proceso que consiste en hacer una selección de los residuos generados para ser tratados en plantas especializadas creando productos para otros usos. De esta manera, se evita el uso descontrolado de recursos naturales, se ahorra energía y se reducen el volumen de residuos.</p>
+            
             <h1>¿Qué se puede reciclar?</h1>
             <p>En los puntos verdes hay 3 tipos de tachos de reciclaje:</p>
             <ul>
