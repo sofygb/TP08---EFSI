@@ -2,7 +2,7 @@ import React from "react";
 
 const Informacion = () => {
     return (
-        <div className="container flex">
+        <div className="container flex contenedor">
             <p>Según la ONU, la gestión de los residuos tiene importantes implicaciones de salud pública, ya que es uno de los dos principales portadores y propagadores de enfermedades infecciosas. 
                 Una gestión ineficaz de residuos sólidos genera una mala impresión en inversionistas y turistas, lo que repercute en la pérdida de reputación y oportunidades de inversión. Así introducimos las siguientes prácticas:</p>
             <ul>
