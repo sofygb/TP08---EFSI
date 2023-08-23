@@ -1,29 +1,28 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
 import Home from './components/Home';
-import Mapa from './components/Mapa';
 import Informacion from './components/Informacion';
-import Nav from './components/Nav';
 import "./styles.css";
+import Nav from "./components/Nav";
+import React from 'react';
 
 
 function App() {
+  const [comments, setComentarios] = React.useState([])
+  console.log("comentario", comments)
+
   return (
     <BrowserRouter>
     <div className="App">
-    <Nav />
       <Routes> 
-        <Route path='/' element={<Layout />}>
+        <Route path='/' element={<Nav />}>
         <Route index element={<Home />}></Route>
-
-        <Route path='/mapa' element={<Mapa />} ></Route>
         <Route path='/informacion' element={<Informacion />} ></Route>
         
         <Route path='*' element={<h1>Not Found</h1>} ></Route>
-        </Route>
+        </Route> 
       </Routes>
-      </div>
+    </div> 
     </BrowserRouter>
   );
 }
