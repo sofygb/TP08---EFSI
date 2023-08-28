@@ -2,7 +2,7 @@ import React from "react";
 
 const Informacion = () => {
     return (
-        <div className="container flex contenedor">
+        <div className="container flex " style={{maxWidth: "100%", marginLeft:"3rem", textAlign:"left"}}><br></br>
             <p>Según la ONU, la gestión de los residuos tiene importantes implicaciones de salud pública, ya que es uno de los dos principales portadores y propagadores de enfermedades infecciosas. 
                 Una gestión ineficaz de residuos sólidos genera una mala impresión en inversionistas y turistas, lo que repercute en la pérdida de reputación y oportunidades de inversión. Así introducimos las siguientes prácticas:</p>
             <ul>
@@ -24,17 +24,17 @@ const Informacion = () => {
             <p>En los puntos verdes hay 3 tipos de tachos de reciclaje:</p>
             <ul>
                 <il>
-                    <h3>Verde</h3>
+                    <h3 style={{color:"green"}}>Verde</h3>
                     <p>Para objetos mayormente compuestos por vidrio, como botellas y frascos.</p></il>
                 <il>
-                    <h3>Azul</h3>
+                    <h3 style={{color:"blue"}}>Azul</h3>
                     <p>Papel y cartón. Para diarios, revistas, papel y cajas.</p></il>
                 <il>
-                    <h3>Amarillo</h3>
+                    <h3 style={{color:"#ded710"}}>Amarillo</h3>
                     <p>Plástico y latas. Para botellas de gaseosas, agua mineral y productos de limpieza, entre otros.</p></il>
             </ul>
         </div>    
     )
 }
 
-export default Informacion
+export default Informacion;

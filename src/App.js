@@ -23,8 +23,8 @@ function App() {
         
         <Route path='*' element={<h1>Not Found</h1>} ></Route>
         </Route> 
-      </Routes>
-      <div className="container flex contenedor">
+      </Routes> <br></br>
+      <div className="container flex" style={{maxWidth: "100%", marginLeft:"3rem", textAlign:"left"}}>
       <div className="row">
       <MyForm comments={comments} setComentarios={setComentarios}></MyForm>
       </div> 
