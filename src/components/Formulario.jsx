@@ -3,9 +3,22 @@ import { useNavigate } from "react-router-dom";
 import React from "react";
 import ReactDOM from 'react-dom/client';
 
+
+const puntosVerdes = ["Armenia 1809", "Medrano, Charcas y, 1746 Palermo", "Antezana 355", "Bulnes, Sarmiento y, 1176"]
+
+const select = document.getElementById("puntoVerde");
+
+puntosVerdes.forEach(element => {
+    const option = document.createElement("option");
+    option.value = element;
+    option.textContent = element;
+    select.appendChild(option);
+});
+
 const MyForm = ({comments, setComentarios}) => {
     const updateComentario = () => {
         const nuevoComentario = {
+            puntoVerde: document.getElementById("puntoVerde").value,
             nombreUsuario: document.getElementById("nombreUsuario").value, 
             calificacion: document.getElementById("calificacion").value,
             comentario: document.getElementById("comentario").value,
@@ -19,6 +32,10 @@ const MyForm = ({comments, setComentarios}) => {
         <div className="one-half column">
             <h2>Reseñas</h2>
         <div>
+        <label for="puntoVerde">Elegi un punto Verde:</label>
+            <select name="puntoVerde" id="puntoVerde">
+            </select>
+            <br></br>
             <label>Usuario </label>
             <input type="text" name="username" className="u-full-width" placeholder="Nombre de Usuario"  id="nombreUsuario" />
             <br></br>
