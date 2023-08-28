@@ -22,7 +22,7 @@ const MyForm = ({ comments, setComentarios }) => {
         <div className="one-half column">
             <h2>Reseñas</h2>
             <div>
-                <label htmlFor="puntoVerde">Elegi un punto Verde:</label>
+                <label htmlFor="puntoVerde">Elige un punto Verde: </label>
                 <select
                     name="puntoVerde"
                     id="puntoVerde"

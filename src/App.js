@@ -11,7 +11,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   const [comments, setComentarios] = React.useState([])
   console.log("comentario", comments)
-
   
   return (
     <BrowserRouter>
@@ -24,12 +23,6 @@ function App() {
         <Route path='*' element={<h1>Not Found</h1>} ></Route>
         </Route> 
       </Routes> <br></br>
-      <div className="container flex" style={{maxWidth: "100%", marginLeft:"3rem", textAlign:"left"}}>
-      <div className="row">
-      <MyForm comments={comments} setComentarios={setComentarios}></MyForm>
-      </div> 
-      <Listado comments={comments} setComentarios={setComentarios} />
-      </div>
     </div> 
     </BrowserRouter>
     

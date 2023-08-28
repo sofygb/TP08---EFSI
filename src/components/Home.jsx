@@ -1,18 +1,23 @@
 import React from "react";
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
+import Listado from './Listado';
+import MyForm from './Formulario';
 
 const Home = () => {
+    const [comments, setComentarios] = React.useState([])
     return (
     <div>
         <h1>Puntos Verdes</h1>
         <div id="map-container">
-            <iframe title="Listado de Puntos Verdes" id="map-canvas" width="690" height="527" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=puntos verdes&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+            <iframe title="Listado de Puntos Verdes" id="map-canvas" width="800" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=puntos verdes&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+    
+        <div className="container flex" style={{maxWidth: "100%", marginLeft:"3rem", textAlign:"left"}}>
+            <div className="row">
+            <MyForm comments={comments} setComentarios={setComentarios}></MyForm>
+            </div> 
+            <Listado comments={comments} setComentarios={setComentarios} />
+        </div>
     </div>
     )
 }
 
 export default Home;
-
-/*<div class="mapouter">
-<div class="gmap_canvas">
-<iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=690&amp;height=527&amp;hl=en&amp;q=puntos verdes&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://gachanymph.com/">Gacha Nymph Download</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:527px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:527px;}.gmap_iframe {height:527px!important;}</style></div>*/
