@@ -8,7 +8,7 @@ const MyForm = ({comments, setComentarios}) => {
         const nuevoComentario = {
             nombreUsuario: document.getElementById("nombreUsuario").value, 
             calificacion: document.getElementById("calificacion").value,
-            texto: document.getElementById("texto").value,
+            comentario: document.getElementById("comentario").value,
             fecha: document.getElementById("fecha").value,
             hora: document.getElementById("hora").value
         } 
@@ -17,23 +17,23 @@ const MyForm = ({comments, setComentarios}) => {
     }
     return (
         <div className="one-half column">
-            <h1>Reseña</h1>
+            <h2>Reseñas</h2>
         <div>
-            <label>Nombre Usuario</label>
-            <input type="text" name="username" className="u-full-width" placeholder="Nombre de Usuario"  id="nombre" />
-            
-            <label>Calificacion</label>
-            <input type="text" name="calif" className="u-full-width" placeholder="Calificacion" id="calificacion" />
-
-            <label>Comentario</label>
+            <label>Usuario </label>
+            <input type="text" name="username" className="u-full-width" placeholder="Nombre de Usuario"  id="nombreUsuario" />
+            <br></br>
+            <label>Calificacion </label>
+            <input type="text" name="calif" className="u-full-width" placeholder="Calificacion entre 1 y 5" id="calificacion" min="1" max="5"/>
+            <br></br>
+            <label>Comentario </label>
             <input type="text" name="comment" className="u-full-width"  id="comentario" />
-
-            <label>Fecha</label>
+            <br></br>
+            <label>Fecha </label>
             <input type="date" name="fecha" className="u-full-width"  id="fecha" />
-
-            <label>Hora</label>
+            <br></br>
+            <label>Hora </label>
             <input type="time" name="hora" className="u-full-width"  id="hora" />
-
+            <br></br><br></br>
             <button type="button" className="u-full-width button-primary" onClick={updateComentario}>Aceptar</button>
         </div>
     </div>

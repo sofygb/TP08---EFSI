@@ -1,16 +1,18 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import Informacion from './components/Informacion';
 import "./styles.css";
-import Nav from "./components/Nav";
 import React from 'react';
-
+import Nav from "./components/Nav";
+import Home from './components/Home';
+import Listado from './components/Listado';
+import MyForm from './components/Formulario';
+import Informacion from './components/Informacion';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   const [comments, setComentarios] = React.useState([])
   console.log("comentario", comments)
 
+  
   return (
     <BrowserRouter>
     <div className="App">
@@ -22,8 +24,15 @@ function App() {
         <Route path='*' element={<h1>Not Found</h1>} ></Route>
         </Route> 
       </Routes>
+      <div className="container flex contenedor">
+      <div className="row">
+      <MyForm comments={comments} setComentarios={setComentarios}></MyForm>
+      </div> 
+      <Listado comments={comments} setComentarios={setComentarios} />
+      </div>
     </div> 
     </BrowserRouter>
+    
   );
 }
 
