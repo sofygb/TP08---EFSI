@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from 'react-dom/client';
 import { useState } from 'react';
+import '../App.css';
 
 const Comentario = ({puntoVerde, nombreUsuario, fecha, comentario, calificacion, hora, posicion, setComentarios, comments}) => { //Element tiene los atributos de cada cita + su key
     const eliminarComentario = () => { //La función debería pasar el setcitas con la lista de citas, sin la cita cuya key es pasada por parámetro
@@ -13,21 +14,28 @@ const Comentario = ({puntoVerde, nombreUsuario, fecha, comentario, calificacion,
         setComentarios(lista1.concat(lista2))
     }
 
-    return (<div>
-    <div className="comentario" style={{ border: "2px solid black", width: 300, borderRadius: "2px", marginTop: "1rem", marginBottom: "1rem"}}>
-        <div style={{margin: "1rem"}}>
-            <p style={{fontSize: 20, fontWeight: 600, color: 'green'}}>Punto Verde: <span>{puntoVerde}</span></p>
-            <p><span>{nombreUsuario}</span></p>
-            <p><span>{calificacion}</span></p>
-            <p><span>{comentario}</span></p>
-            <p>Fecha: <span>{fecha}</span></p>
-            <p>Hora: <span>{hora}</span></p>
-            <button className="button.elimnar u-full-width" style={{}} onClick={eliminarComentario}>Eliminar
-                ×</button>
-        </div>
-    
-    </div> 
-</div> )
+    return (
+        <div className="comentario-card">
+  <div className="comentario-content">
+    <p className="comentario-title">Punto Verde: <span>{puntoVerde}</span></p>
+    <p className="comentario-username">{nombreUsuario}</p>
+    <div className="comentario-rating">
+      <span>Calificación:</span>
+      <div className="rating-stars">
+        {Array.from({ length: calificacion }, (_, index) => (
+          <span key={index} className="star-icon">★</span>
+        ))}
+      </div>
+    </div>
+    <p className="comentario-text">{comentario}</p>
+    <p className="comentario-date">Fecha: <span>{fecha}</span></p>
+    <p className="comentario-time">Hora: <span>{hora}</span></p>
+    <button className="eliminar-button" onClick={eliminarComentario}>Eliminar ×</button>
+  </div>
+</div>
+
+
+    )
 
 }
 
