@@ -38,19 +38,19 @@ const MyForm = ({ comments, setComentarios }) => {
                 </select>
                 <br />
                 <br></br>
-            <label>Usuario </label>
+            <label>Usuario: </label>
             <input type="text" name="username" className="u-full-width" placeholder="Nombre de Usuario"  id="nombreUsuario" />
             <br></br>
-            <label>Calificacion </label>
+            <label>Calificacion: </label>
             <input type="text" name="calif" className="u-full-width" placeholder="Calificacion entre 1 y 5" id="calificacion" min="1" max="5"/>
             <br></br>
-            <label>Comentario </label>
+            <label>Comentario: </label>
             <input type="text" name="comment" className="u-full-width"  id="comentario" />
             <br></br>
-            <label>Fecha </label>
+            <label>Fecha: </label>
             <input type="date" name="fecha" className="u-full-width"  id="fecha" />
             <br></br>
-            <label>Hora </label>
+            <label>Hora: </label>
             <input type="time" name="hora" className="u-full-width"  id="hora" />
             <br></br><br></br>
                 <button

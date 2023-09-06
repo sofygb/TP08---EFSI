@@ -13,16 +13,22 @@ const Comentario = ({puntoVerde, nombreUsuario, fecha, comentario, calificacion,
         setComentarios(lista1.concat(lista2))
     }
 
-    return (<div><div className="comentario" style={{ border: "2px solid black", width: 300, borderRadius: "2px"}}>
-    <p style={{fontSize: 20, fontWeight: 600, color: 'green'}}>Punto Verde: <span>{puntoVerde}</span></p>
-    <p><span>{nombreUsuario}</span></p>
-    <p><span>{calificacion}</span></p>
-    <p><span>{comentario}</span></p>
-    <p>Fecha: <span>{fecha}</span></p>
-    <p>Hora: <span>{hora}</span></p>
-    <button className="button.elimnar u-full-width" onClick={eliminarComentario}>Eliminar
-        ×</button>
-</div></div>)
+    return (<div>
+    <div className="comentario" style={{ border: "2px solid black", width: 300, borderRadius: "2px", marginTop: "1rem", marginBottom: "1rem"}}>
+        <div style={{margin: "1rem"}}>
+            <p style={{fontSize: 20, fontWeight: 600, color: 'green'}}>Punto Verde: <span>{puntoVerde}</span></p>
+            <p><span>{nombreUsuario}</span></p>
+            <p><span>{calificacion}</span></p>
+            <p><span>{comentario}</span></p>
+            <p>Fecha: <span>{fecha}</span></p>
+            <p>Hora: <span>{hora}</span></p>
+            <button className="button.elimnar u-full-width" style={{}} onClick={eliminarComentario}>Eliminar
+                ×</button>
+        </div>
+    
+    </div> 
+</div> )
+
 }
 
 export default Comentario
