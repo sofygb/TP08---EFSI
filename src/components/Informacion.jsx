@@ -32,7 +32,11 @@ const Informacion = () => {
                 <il>
                     <h3 style={{color:"#ded710"}}>Amarillo</h3>
                     <p>Plástico y latas. Para botellas de gaseosas, agua mineral y productos de limpieza, entre otros.</p></il>
+                    <il>
+                    <h3 style={{color:"green"}}>Naranja</h3>
+                    <p>Para objetos mayormente compuestos por metal, como botellas y frascos.</p></il>
             </ul>
+            <i>Aclaración: el color de los tachos y lo que se tira varía dependiendo del lugar, si tienes dudas, los mismos puntos verdes tienen marcados en qué color van los distintos tipos de reciduos.</i>
         </div>    
     )
 }
