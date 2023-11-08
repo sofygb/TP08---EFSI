@@ -9,8 +9,10 @@ export default function Nav(){
    <React.Fragment>
         <div className="navbar">
            <ul className="nav-links">
-              <Link to="/">Puntos Verdes</Link>
-              <Link to="/informacion">Más Información</Link>
+            <Link to="/">Home</Link>
+              <Link to="/creaciones">Mis Creaciones</Link>
+              <Link to="/favoritos">Favoritos</Link>
+              <Link to="/aboutus">Acerca de mi</Link>
            </ul>
         </div>
         <Outlet />

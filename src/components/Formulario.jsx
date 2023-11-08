@@ -12,8 +12,7 @@ const MyForm = ({ comments, setComentarios }) => {
             nombreUsuario: document.getElementById("nombreUsuario").value,
             calificacion: document.getElementById("calificacion").value,
             comentario: document.getElementById("comentario").value,
-            fecha: document.getElementById("fecha").value,
-            hora: document.getElementById("hora").value,
+            mail: document.getElementById("mail").value,
         };
 
         setComentarios([...comments, nuevoComentario]);
@@ -21,66 +20,43 @@ const MyForm = ({ comments, setComentarios }) => {
 
     return (
         <div className="one-half column">
-  <h2>Reseñas</h2>
+  <h2>Contacto</h2>
   <div className="form-container">
-    <label htmlFor="puntoVerde">Elige un Punto Verde:</label>
-    <select
-      name="puntoVerde"
-      id="puntoVerde"
-      value={selectedPuntoVerde}
-      onChange={(e) => setSelectedPuntoVerde(e.target.value)}
-    >
-      <option value="">Selecciona un punto verde</option>
-      {puntosVerdes.map((element, index) => (
-        <option key={index} value={element}>
-          {element}
-        </option>
-      ))}
-    </select>
 
-    <label htmlFor="nombreUsuario">Nombre de Usuario:</label>
+    <label htmlFor="nombreUsuario">Nombre</label>
     <input
       type="text"
       name="username"
       className="u-full-width"
-      placeholder="Ingresa tu nombre de usuario"
+      placeholder="Escribe tu Nombre"
       id="nombreUsuario"
     />
 
-    <label htmlFor="calificacion">Calificación:</label>
-    <input
-      type="number"
-      name="calif"
-      className="u-full-width"
-      placeholder="Calificación entre 1 y 5"
-      id="calificacion"
-      min="1"
-      max="5"
-    />
-
-    <label htmlFor="comentario">Comentario:</label>
+    <label htmlFor="calificacion">Asunto</label>
     <textarea
-      name="comment"
-      className="u-full-width"
-      placeholder="Escribe tu comentario"
-      id="comentario"
+     name="asunto"
+     className="u-full-width"
+     placeholder="Escribe tu Asunto"
+     id="asunto"
     ></textarea>
 
-    <label htmlFor="fecha">Fecha:</label>
-    <input
-      type="date"
-      name="fecha"
-      className="u-full-width"
-      id="fecha"
-    />
 
-    <label htmlFor="hora">Hora:</label>
-    <input
-      type="time"
-      name="hora"
+    <label htmlFor="comentario">Comentario</label>
+    <textarea
+     name="comment"
+     className="u-full-width"
+     placeholder="Escribe tu Comentario"
+     id="comentario"
+    ></textarea>
+
+<label htmlFor="mail">Mail</label>
+    <textarea
+      name="mail"
       className="u-full-width"
-      id="hora"
-    />
+      placeholder="Escribe tu Mail"
+      id="mail"
+    ></textarea>
+
 
     <button
       type="button"

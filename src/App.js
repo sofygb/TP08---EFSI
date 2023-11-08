@@ -5,7 +5,9 @@ import Nav from "./components/Nav";
 import Home from './components/Home';
 import Listado from './components/Listado';
 import MyForm from './components/Formulario';
-import Informacion from './components/Informacion';
+import Creaciones from './components/Creaciones';
+import Favoritos from './components/Favoritos';
+import AboutUs from './components/Aboutus';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -18,8 +20,9 @@ function App() {
       <Routes> 
         <Route path='/' element={<Nav />}>
         <Route index element={<Home />}></Route>
-        <Route path='/informacion' element={<Informacion />} ></Route>
-        
+        <Route path='/creaciones' element={<Creaciones />} ></Route>
+        <Route path='/favoritos' element={<Favoritos />} ></Route>
+        <Route path='/aboutus' element={<AboutUs />} ></Route>
         <Route path='*' element={<h1>Not Found</h1>} ></Route>
         </Route> 
       </Routes> <br></br>

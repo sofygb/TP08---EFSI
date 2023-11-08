@@ -1,6 +1,6 @@
 import React from "react";
 
-const Informacion = () => {
+const aboutus = () => {
     return (
         <div className="container flex " style={{maxWidth: "100%", marginLeft:"3rem", textAlign:"left"}}><br></br>
             <p>Según la ONU, la gestión de los residuos tiene importantes implicaciones de salud pública, ya que es uno de los dos principales portadores y propagadores de enfermedades infecciosas. 
@@ -41,4 +41,4 @@ const Informacion = () => {
     )
 }
 
-export default Informacion;
+export default aboutus;
